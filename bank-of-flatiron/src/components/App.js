@@ -9,9 +9,9 @@ function App() {
 
 
   return (
-    <div >
-      
+    <div >  
     <Transactions />
+    <Form />
     </div>
   );
 }

@@ -20,7 +20,7 @@ function Transactions(){
 
         const newArray =transData.map((item)=> {
             return (
-                <tr>
+                <tr key={item.id}>
                     <td>{item.id}</td>
                     <td>{item.date}</td>
                     <td>{item.description}</td>
@@ -33,19 +33,16 @@ function Transactions(){
     
 
     return(
-        <div>
-            <table>
-                    <tr>
-                        <th>id</th>
-                        <th>Date</th>
-                        <th>Description</th>
-                        <th>Category</th>
-                        <th>Amount</th>
-                    </tr>
-                    {newArray}
-                </table>
-            
-        </div>
+         <tbody>
+              <tr>
+                <th>id</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Category</th>
+                 <th>Amount</th>
+            </tr>
+             {newArray} 
+        </tbody>
     )
 
 }
