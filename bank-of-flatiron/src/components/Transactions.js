@@ -9,11 +9,12 @@ function Transactions(){
 
 
         useEffect(()=>{
-            fetch("https://lorraineken.github.io/server/bank-of-flatiron.json")
+            fetch("http://localhost:3000/transactions")
             .then((response)=> response.json())
             .then((data)=> 
             {    
-            const displayData =data.transactions
+            //const displayData =data.transactions
+            const displayData =data
                return setData(displayData)
             }  ) },[])
 
