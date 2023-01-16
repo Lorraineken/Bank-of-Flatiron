@@ -33,7 +33,7 @@ function Transactions(){
     
 
     return(
-         <tbody>
+         <tbody className="">
               <tr>
                 <th>id</th>
                 <th>Date</th>
