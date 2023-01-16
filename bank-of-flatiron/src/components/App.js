@@ -1,13 +1,16 @@
 import React from "react"
 import './App.css';
-import Transactions from "../Transactions"
+import Transactions from "./Transactions"
 
 function App() {
+  
+  
 
 
   return (
     <div >
-    <Transactions/>
+      
+    <Transactions />
     </div>
   );
 }
