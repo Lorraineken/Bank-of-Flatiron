@@ -7,20 +7,31 @@ function Form(){
     const [category, setCategory] = useState("Housing")
     const [amount, setAmount] = useState(500)
 
- function handleDateChange(){}
+ function handleDateChange(event){
+    setDate(event.target.value)
+ }
+ function handleDescriptionChange(event){
+    setDescription(event.target.value)
+ }
+ function handleCategoryChange(event){
+    setCategory(event.target.value)
+ }
+ function handleAmountChange(event){
+    setAmount(event.target.value)
+ }
 
 return (
     <div>
     <form >
     <h4 >Add Transaction</h4>
     <label htmlFor="Date">DATE</label>
-    <input type="text"  />
+    <input type="text" onChange={handleDateChange} value={date}/>
     <label htmlFor="Description">DESCRIPTION</label>
-    <input type="text"  />
+    <input type="text" onChange={handleDescriptionChange} value={description} />
     <label htmlFor="Category">CATEGORY</label>
-    <input type="text"  />
+    <input type="text" onChange={handleCategoryChange} value={category}  />
     <label htmlFor="Amount">AMOUNT</label>
-    <input type="text"  />
+    <input type="text" onChange={handleAmountChange} value={amount}  />
    
     <button type="submit">submit Transaction</button>
   </form>
