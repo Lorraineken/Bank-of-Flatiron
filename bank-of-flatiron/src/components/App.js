@@ -3,16 +3,15 @@ import './App.css';
 import "./bootstrap.css"
 import Transactions from "./Transactions"
 import Form from "./Form";
-import SearchBar from "./SearchBar";
 
 function App() {
   
 
   return (
-    <div >  
-      <SearchBar/>
+    <div > 
+      <Form /> 
     <Transactions />
-    <Form />
+    
     </div>
   );
 }

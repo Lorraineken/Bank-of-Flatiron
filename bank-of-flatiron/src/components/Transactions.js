@@ -6,7 +6,9 @@ function Transactions(){
 
 
     const [transData, setData] = useState([])
+    const [searchInput, setSearchInput] = useState()
 
+    
 
         useEffect(()=>{
             fetch("http://localhost:3000/transactions")
@@ -18,7 +20,11 @@ function Transactions(){
                return setData(displayData)
             }  ) },[])
 
-        const newArray =transData.map((item)=> {
+            function handleSearchChange(e){
+                setSearchInput(e.target.value)
+               }
+
+        const newArray =(transData.map((item)=> {
             return (
                 <tr key={item.id}>
                     <td>{item.date}</td>
@@ -28,11 +34,24 @@ function Transactions(){
                 </tr>
             )
         
-        })
-    
+        }))
 
-    return(
-         <tbody className="table-primary">
+        const filterData =transData.filter((data) => data.description.includes(searchInput))
+
+        const filteredArray=filterData.map((item) => {
+            return(
+             <tr key={item.id}>
+                <td>{item.date}</td>
+                <td>{item.description}</td>
+                <td>{item.category}</td>
+                <td>{item.amount}</td>
+            </tr>
+            )
+        })
+        
+    
+        const displayTable=(
+            <tbody className="table-render">
               <tr>
                 <th >Date</th>
                 <th >Description</th>
@@ -41,6 +60,17 @@ function Transactions(){
             </tr>
              {newArray} 
         </tbody>
+        )
+
+
+   
+
+    return(
+         <React.Fragment>
+         <input type="text" placeholder="Search Here"  onChange={handleSearchChange} value={searchInput} />
+         <button >Search</button>
+            {displayTable}
+         </React.Fragment>
     )
 
 }

@@ -1,4 +1,4 @@
-import React , {useEffect, useState}from "react";
+import React , { useState}from "react";
 import "./bootstrap.css"
 
 function Form(){
@@ -61,15 +61,15 @@ function Form(){
 
 return (
     <div>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form-style">
     <h4 >Add Transaction</h4>
-    <label htmlFor="Date">DATE</label>
+    <label htmlFor="Date"><span>DATE</span></label>
     <input type="text" onChange={handleDateChange} value={date}/>
-    <label htmlFor="Description">DESCRIPTION</label>
+    <label htmlFor="Description"><span>DESCRIPTION</span></label>
     <input type="text" onChange={handleDescriptionChange} value={description} />
-    <label htmlFor="Category">CATEGORY</label>
+    <label htmlFor="Category"><span>CATEGORY</span></label>
     <input type="text" onChange={handleCategoryChange} value={category}  />
-    <label htmlFor="Amount">AMOUNT</label>
+    <label htmlFor="Amount"><span>AMOUNT</span></label>
     <input type="text" onChange={handleAmountChange} value={amount}  />
    
     <button type="submit">submit Transaction</button>
