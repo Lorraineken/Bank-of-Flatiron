@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-
+import "./App.css"
 
 
 function Transactions(){
@@ -21,7 +21,6 @@ function Transactions(){
         const newArray =transData.map((item)=> {
             return (
                 <tr key={item.id}>
-                    <td>{item.id}</td>
                     <td>{item.date}</td>
                     <td>{item.description}</td>
                     <td>{item.category}</td>
@@ -33,13 +32,12 @@ function Transactions(){
     
 
     return(
-         <tbody className="">
+         <tbody className="table-primary">
               <tr>
-                <th>id</th>
-                <th>Date</th>
-                <th>Description</th>
-                <th>Category</th>
-                 <th>Amount</th>
+                <th >Date</th>
+                <th >Description</th>
+                <th >Category</th>
+                 <th >Amount</th>
             </tr>
              {newArray} 
         </tbody>
