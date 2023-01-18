@@ -17,11 +17,11 @@ Follow the steps below to use this repo in your machine
 - Open a the command line interface on your computer
 - Clone the repo by using the following:
 
-        git clone 
+        git clone https://github.com/Lorraineken/Bank-of-Flatiron.git
 
 - Change directory to the repo folder:
 
-        cd 
+        cd Bank-of-Flatiron/bank-of-flatiron/
 
 - (Optional) Open it in ``Visual Studio Code``
 
